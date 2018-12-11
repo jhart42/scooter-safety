@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html>
+ <head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Gainesville Scooter Safety</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato|Shrikhand|Slabo+13px" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+  integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin="">
+  <link href="css/my.css" rel="stylesheet" type="text/css">
+ </head>
+
+ <body>
+
+     <div class="bgimg-1">
+      <div id="hero"></div>
+    </div><!--bgimg-1-->
+   <div id="background">
+    <div id="intro">
+      <h1 class="title">Scooter Safety In <br>Gainesville, FL</h1>
+      <h2>Introduction</h2>
+      <p>Driving a scooter on the university of Florida campus can be one of your happiest experiences during your time as a student. The hobby has become so popular that in 2013, scooter drivers made up approximately 10% of all drivers who park on UF campus (UF, Campus Master Plan 2015-2025). This web page is meant to show the students and residents of Gainesville the proper riding attire to safely scoot around town.</p>
+      <br>
+      <p>When you drive a scooter or motorcycle, you sacrifice safety features in cars, such as a hard-shell exterior, seat belts, and airbags to name a few. To make up for the risks driving a two-wheel vehicle imposes, you must always wear protective gear, such as gloves, a jacket, and a sturdy pair of pants that reaches your ankles. While this may seem like a burden at times, it would be much more favorable than the road rash you’ll earn by wearing a tank top and shorts. Always remember to wear clothing that will protect if need to lay your bike down while driving.</p>
+
+      <h2>Click the icons to learn more</h2>
+    </div><!--intro-->
+
+    <div id="icon_text">
+      <div id="helmet">
+        <img src="images/helmet.png" class="icons" id="helmet_icon" alt="Icon of a helemt.">
+        <p id="helmet_text">Using a helmet is essential to riding any two-wheeled vehicle. The primary cause of death on a scooter is traumatic brain injury. This happens when your head impacts the pavement at a high speed. Often, the helmet ratings for scooters and motorcyclists can be confusing when looking to purchase. However, helmets are rated on a variety of factors that determine their effeciveness and certification rating (such as, DOT, ECE 22.05, and SNELL). Just wearing a helmet in a collision can reduce your chances of death by 40% (Injury Epidemiology, 2016). Why take the chance?</p>
+      </div><!--helmet-->
+
+      <div id="gloves">
+        <img src="images/glove.png" class="icons" id="gloves_icon" alt="Icon of gloves.">
+        <p id="gloves_text">When riding a scooter, gloves should be worn to prevent serious injuries to the hands. In an accident, what's the first body part to make contact with the pavement? The hands; its instinctive to brace yourself upon impact. Additionally, gloves keep the hands warm in the winter. This prevents shaking and over-gripping the handlebars. Therefore, you should always wear your gloves when you scoot.</p>
+      </div><!--gloves-->
+
+      <div id="boots">
+        <img src="images/boots.png" class="icons" id="boots_icon" alt="Icon of boots.">
+        <p id="boots_text">You must always wear protective, close-toed shoes or boots that cover the ankle when riding. Boots are integral when riding in case the vehicle falls or gets knocked-down. Also, in an emergency, the feet serve as last resort brakes. Ultimately, the wrong footwear could be fatal.</p>
+      </div><!--boots-->
+    </div><!--icons-->
+
+      <h1>Find Gear</h1>
+      <p>If you don’t have the suggested protective gear, or need equipment for any environment, consider visiting one of the following locations in the Gainesville area and building your riding wardrobe. </p>
+      <div id="scoot_map"></div>
+
+
+      <h1>Test Yourself</h1>
+      <p>Are you ready to test your knowledge and see if you have what it takes to drive a scooter in Gainesville?</p> <p>Take the quiz below to find out!</p>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12">
+            <form>
+              <div class="form-group">
+                <label>1. Boots serve the following puposes: (Check all that apply.)</label>
+              </div><!-- form-group -->
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="check" value="brakes">
+                <label class="form-check-label">
+                  Emergency brakes
+                </label>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="check" value="elements">
+                  <label class="form-check-label">
+                      Protection from elements
+                  </label>
+                </div><!-- form check -->
+
+              </div><!-- form check -->
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="check" value="snakes">
+                <label class="form-check-label">
+                 Protection from snakes
+                </label>
+              </div><!-- form check -->
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="check" value="vehicle ">
+                <label class="form-check-label">
+                  Protection from vehicle
+                </label>
+              </div><!-- form check -->
+<!--question 2-->
+              <div class="form-group">
+                  <label for="hands">2. What is the first body part that will touch the pavement in an accident?</label>
+                   <input class="form-control" type="text" name="hands" id="hands" >
+              </div><!-- form-group -->
+<!--question 3-->
+              <div class="form-group">
+                <label>3. How should you drive on a scooter? (Choose one.)</label>
+              </div><!-- form-group -->
+
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="drive" value="Aggressively">
+                <label class="form-check-label">
+                   Aggressively
+                </label>
+              </div><!-- form check -->
+
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="drive" value="Defensively">
+                <label class="form-check-label">
+                  Defensively
+                </label>
+              </div><!-- form check -->
+
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="drive" value="Illegally">
+                <label class="form-check-label">
+                  Illegally
+                </label>
+              </div><!-- form check -->
+
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="drive" value="Joyfully">
+                <label class="form-check-label">
+                  Joyfully
+                </label>
+              </div><!-- form check -->
+
+<!--question 4-->
+              <div class="form-group">
+                <label>4. What are the three helmet standards? (Check all that apply.)</label>
+              </div><!-- form-group -->
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="check" value="JPG">
+                <label class="form-check-label">
+                    JPG
+                </label>
+              </div><!-- form check -->
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="check" value="ECE">
+                  <label class="ECE 22.05">
+                    ECE 22.05
+                  </label>
+                </div><!-- form check -->
+
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="check" value="PNG">
+                <label class="form-check-label">
+                   OMG
+                </label>
+              </div><!-- form check -->
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="check" value="snell">
+                <label class="form-check-label">
+                    Snell
+                </label>
+              </div><!-- form check -->
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="check" value="DOT">
+                <label class="form-check-label">
+                    DOT
+                </label>
+              </div><!-- form check -->
+<!--question 5-->
+              <div class="form-group">
+                  <label for="pop"> 5. Scooter drivers make up what percent of the dricing population at UF?</label>
+                   <input class="form-control" type="text" name="pop" id="pop" >
+              </div><!-- form-group -->
+<!--question 6-->
+              <div class="form-group">
+                <label>6. Riding a scooter or motorcycle without a helmet increases your risk of death in an accident by what percent? (Choose one.)</label>
+              </div><!-- form-group -->
+
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="death" value="10%">
+                <label class="form-check-label">
+                   10%
+                </label>
+              </div><!-- form check -->
+
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="death" value="20%">
+                <label class="form-check-label">
+                  20%
+                </label>
+              </div><!-- form check -->
+
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="death" value="30%">
+                <label class="form-check-label">
+                  30%
+                </label>
+              </div><!-- form check -->
+
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="death" value="40%">
+                <label class="form-check-label">
+                  40%
+                </label>
+              </div><!-- form check -->
+
+
+
+
+
+            </form>
+          </div><!-- col-sm-12 col-md-10 -->
+        </div><!-- row -->
+      </div><!-- container -->
+
+      <h2>References</h2>
+      <p>Olsen, C. S., Thomas, A. M., et al. (2016). Motorcycle helmet effectiveness in reducing head, face and brain injuries by state and helmet law. Injury epidemiology, 3(1), 8.</p>
+      <p>University of Florida, Department of Transportation and Parking, Campus Master Plan 2015-2025. (June 2015). <a href="http://www.facilities.ufl.edu/plan/docs/da/Transpo.pdf" target="_blank">Transportation Data & Analysis</a>.
+      <p>Motorcycle Helmet by Hamfif from the Noun Project.</p>
+      <p>Motorcycle Boots by Hamfif from the Noun Project.</p>
+      <p>Motorcycle Glove by Hamfif from the Noun Project</p>
+    </div><!--background-->
+
+  <footer>This site was created as part of a web design project for a University of Florida Class, JOU 3363.<a href=""> Here</a> is a link to this site's github page.</footer>
+
+
+
+  <!-- scripts below-->
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+   <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
+   <!--keep map.js last-->
+
+   <script src="scripts/scooter.js"></script>
+ </body>
+</html>
